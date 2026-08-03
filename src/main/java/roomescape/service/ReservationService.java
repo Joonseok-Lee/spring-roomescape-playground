@@ -12,5 +12,4 @@ public interface ReservationService {
     Reservation createReservation(ReservationRequest reservationRequest);
 
     Void deleteReservation(Long reservationId);
-    List<Reservation> findAllReservations();
 }
