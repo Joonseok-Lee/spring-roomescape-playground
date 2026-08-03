@@ -48,11 +48,7 @@ class CRUDTest {
                 .then().log().all().extract();
 
         assertThat(response.statusCode()).isEqualTo(HttpStatus.OK.value());
-<<<<<<< HEAD
         assertThat(response.jsonPath().getList("", MemberResponse.class)).hasSize(1);
-=======
-        assertThat(response.jsonPath().getList("", Member.class)).hasSize(1);
->>>>>>> 44fe85c (test: CRUD 테스트에서 create 테스트를 성공하는 최소 구현 작성)
     }
 
     @Test
