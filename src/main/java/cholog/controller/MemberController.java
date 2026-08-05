@@ -5,7 +5,6 @@ import cholog.dto.response.MemberResponse;
 import cholog.entity.Member;
 import cholog.entity.Person;
 import cholog.service.MemberService;
-import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -25,7 +24,7 @@ public class MemberController {
 
     @PostMapping("/members")
     public ResponseEntity<MemberResponse> createMember(
-            @RequestBody @Valid MemberRequest request
+            @RequestBody MemberRequest request
     ) {
 
         Member member = memberService.createMember(request);
@@ -48,7 +47,7 @@ public class MemberController {
 
     @PutMapping("/members/{memberId}")
     public ResponseEntity<MemberResponse> updateMember(
-            @RequestBody @Valid MemberRequest request,
+            @RequestBody MemberRequest request,
             @PathVariable Long memberId
     ) {
 
