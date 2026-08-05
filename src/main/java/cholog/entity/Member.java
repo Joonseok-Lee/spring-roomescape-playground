@@ -1,7 +1,5 @@
 package cholog.entity;
 
-import java.util.Objects;
-
 public class Member {
 
     private Long id;
@@ -45,21 +43,5 @@ public class Member {
             this.age = member.age;
         }
         return this;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof Member member)) {
-            return false;
-        }
-        return id != null && id.equals(member.getId());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(id);
     }
 }

@@ -1,6 +1,5 @@
 package cholog;
 
-import cholog.dto.response.MemberResponse;
 import cholog.entity.Member;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -48,7 +47,7 @@ class CRUDTest {
                 .then().log().all().extract();
 
         assertThat(response.statusCode()).isEqualTo(HttpStatus.OK.value());
-        assertThat(response.jsonPath().getList("", MemberResponse.class)).hasSize(1);
+        assertThat(response.jsonPath().getList("", Member.class)).hasSize(1);
     }
 
     @Test
