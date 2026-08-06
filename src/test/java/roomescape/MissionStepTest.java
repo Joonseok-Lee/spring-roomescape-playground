@@ -22,7 +22,7 @@ public class MissionStepTest {
 
     @BeforeEach
     public void setup() {
-        RestAssured.port = this.port;
+        RestAssured.port = port;
     }
 
     @Test
