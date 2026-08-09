@@ -7,11 +7,11 @@ import roomescape.repository.ReservationRepository;
 
 import java.util.List;
 
-public class ReservationServiceImpl implements ReservationService {
+public class ReservationServiceV1 implements ReservationService {
 
     private final ReservationRepository reservationRepository;
 
-    public ReservationServiceImpl(ReservationRepository reservationRepository) {
+    public ReservationServiceV1(ReservationRepository reservationRepository) {
         this.reservationRepository = reservationRepository;
     }
 
