@@ -2,8 +2,6 @@ package roomescape.controller;
 
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -15,14 +13,18 @@ import roomescape.exception.ReservationNotFoundException;
 import roomescape.service.ReservationService;
 
 import java.net.URI;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-public class RoomEscapeController {
+public class ReservationController {
 
     private final ReservationService reservationService;
 
-    public RoomEscapeController(ReservationService reservationService) {
+    public ReservationController(ReservationService reservationService) {
         this.reservationService = reservationService;
     }
 
@@ -80,5 +82,4 @@ public class RoomEscapeController {
     ) {
         return ResponseEntity.badRequest().build();
     }
-
 }
