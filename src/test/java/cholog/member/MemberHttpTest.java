@@ -1,7 +1,6 @@
-package cholog.member;
+package cholog.entity;
 
 import cholog.dto.response.MemberResponse;
-import cholog.entity.Member;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.BeforeEach;
